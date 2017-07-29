@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD3FF2C11F2CBBC40055FFEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2C01F2CBBC40055FFEF /* AppDelegate.swift */; };
-		FD3FF2C31F2CBBC40055FFEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2C21F2CBBC40055FFEF /* ViewController.swift */; };
 		FD3FF2C61F2CBBC40055FFEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3FF2C41F2CBBC40055FFEF /* Main.storyboard */; };
 		FD3FF2C81F2CBBC40055FFEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3FF2C71F2CBBC40055FFEF /* Assets.xcassets */; };
 		FD3FF2CB1F2CBBC40055FFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3FF2C91F2CBBC40055FFEF /* LaunchScreen.storyboard */; };
+		FD3FF2D81F2CBCD80055FFEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2D31F2CBCD80055FFEF /* AppDelegate.swift */; };
+		FD3FF2D91F2CBCD80055FFEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2D51F2CBCD80055FFEF /* ViewController.swift */; };
+		FD3FF2DA1F2CBCD80055FFEF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD3FF2D71F2CBCD80055FFEF /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD3FF2BD1F2CBBC40055FFEF /* ImageRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3FF2C01F2CBBC40055FFEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD3FF2C21F2CBBC40055FFEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD3FF2C51F2CBBC40055FFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD3FF2C71F2CBBC40055FFEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD3FF2CA1F2CBBC40055FFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FD3FF2CC1F2CBBC40055FFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3FF2D31F2CBCD80055FFEF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD3FF2D51F2CBCD80055FFEF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD3FF2D71F2CBCD80055FFEF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +55,38 @@
 		FD3FF2BF1F2CBBC40055FFEF /* ImageRecognition */ = {
 			isa = PBXGroup;
 			children = (
-				FD3FF2C01F2CBBC40055FFEF /* AppDelegate.swift */,
-				FD3FF2C21F2CBBC40055FFEF /* ViewController.swift */,
+				FD3FF2D21F2CBCD80055FFEF /* Sources */,
+				FD3FF2D61F2CBCD80055FFEF /* Supporting Files */,
 				FD3FF2C41F2CBBC40055FFEF /* Main.storyboard */,
 				FD3FF2C71F2CBBC40055FFEF /* Assets.xcassets */,
 				FD3FF2C91F2CBBC40055FFEF /* LaunchScreen.storyboard */,
-				FD3FF2CC1F2CBBC40055FFEF /* Info.plist */,
 			);
 			path = ImageRecognition;
+			sourceTree = "<group>";
+		};
+		FD3FF2D21F2CBCD80055FFEF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FF2D31F2CBCD80055FFEF /* AppDelegate.swift */,
+				FD3FF2D41F2CBCD80055FFEF /* ViewControllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FD3FF2D41F2CBCD80055FFEF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FF2D51F2CBCD80055FFEF /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FD3FF2D61F2CBCD80055FFEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FF2D71F2CBCD80055FFEF /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3FF2DA1F2CBCD80055FFEF /* Info.plist in Resources */,
 				FD3FF2CB1F2CBBC40055FFEF /* LaunchScreen.storyboard in Resources */,
 				FD3FF2C81F2CBBC40055FFEF /* Assets.xcassets in Resources */,
 				FD3FF2C61F2CBBC40055FFEF /* Main.storyboard in Resources */,
@@ -136,8 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3FF2C31F2CBBC40055FFEF /* ViewController.swift in Sources */,
-				FD3FF2C11F2CBBC40055FFEF /* AppDelegate.swift in Sources */,
+				FD3FF2D91F2CBCD80055FFEF /* ViewController.swift in Sources */,
+				FD3FF2D81F2CBCD80055FFEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ImageRecognition/Info.plist;
+				INFOPLIST_FILE = "ImageRecognition/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.hispot.ImageRecognition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,7 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ImageRecognition/Info.plist;
+				INFOPLIST_FILE = "ImageRecognition/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.hispot.ImageRecognition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,6 +327,7 @@
 				FD3FF2D11F2CBBC40055FFEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
