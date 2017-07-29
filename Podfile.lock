@@ -1,0 +1,26 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - Kingfisher (3.10.2)
+  - R.swift (3.3.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
+  - SwiftyUserDefaults (3.0.0)
+
+DEPENDENCIES:
+  - ChameleonFramework
+  - Kingfisher
+  - R.swift
+  - SwiftyUserDefaults
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
+  R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
+
+PODFILE CHECKSUM: dffb20194f410c93baaf905590c1d07bd9e6eb93
+
+COCOAPODS: 1.2.1
