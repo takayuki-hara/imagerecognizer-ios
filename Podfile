@@ -4,7 +4,7 @@ platform :ios, '8.0'
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'ImageRecognition' do
+target 'ImageRecognizer' do
     #pod 'Alamofire'
     #pod 'ObjectMapper'
     #pod 'RealmSwift'
@@ -19,7 +19,7 @@ end
 post_install do | installer |
    require 'fileutils'
    
-   #Pods-ImageRecognition-acknowledgements.plistを移動する
-   FileUtils.cp_r('Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-acknowledgements.plist', 'ImageRecognition/Supporting Files/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+   #Pods-ImageRecognizer-acknowledgements.plistを移動する
+   FileUtils.cp_r('Pods/Target Support Files/Pods-ImageRecognizer/Pods-ImageRecognizer-acknowledgements.plist', 'ImageRecognizer/Supporting Files/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
    
 end
