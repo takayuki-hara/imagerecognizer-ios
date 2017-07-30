@@ -21,37 +21,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="認識対象画像の設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-Nx-G5o">
-                                <rect key="frame" x="20" y="84" width="156" height="21"/>
+                                <rect key="frame" x="20" y="84" width="156" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.15868747234344482" green="0.21822044253349304" blue="0.30320093035697937" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image" translatesAutoresizingMaskIntoConstraints="NO" id="Xsn-Wn-Zy9">
-                                <rect key="frame" x="87" y="110" width="200" height="200"/>
+                                <rect key="frame" x="87" y="109.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="RD0-G1-eLE"/>
                                     <constraint firstAttribute="width" constant="200" id="yqM-6p-p7z"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリの設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHq-30-HTX">
-                                <rect key="frame" x="20" y="370" width="122" height="21"/>
+                                <rect key="frame" x="20" y="369.5" width="121.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.15868747234344482" green="0.21822044253349304" blue="0.30320093035697937" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5xI-EP-QcV">
-                                <rect key="frame" x="40" y="320" width="296" height="30"/>
+                                <rect key="frame" x="30" y="319.5" width="316" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-LK-Pwe">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-LK-Pwe" customClass="CustomButton" customModule="ImageRecognizer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="30"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" title="フォトライブラリー"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didPushPhotoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="57j-Ei-SbE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHb-y3-cQp">
-                                        <rect key="frame" x="158" y="0.0" width="138" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHb-y3-cQp" customClass="CustomButton" customModule="ImageRecognizer" customModuleProvider="target">
+                                        <rect key="frame" x="168" y="0.0" width="148" height="30"/>
                                         <state key="normal" title="写真を撮影する"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didPushCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TVB-Cg-G3s"/>
                                         </connections>
@@ -62,17 +73,22 @@
                                 </constraints>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FA-Fw-cAF">
-                                <rect key="frame" x="28" y="396" width="320" height="100"/>
+                                <rect key="frame" x="28" y="395" width="320" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="N2q-GK-9fe"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8C-4T-Itt">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8C-4T-Itt" customClass="CustomButton" customModule="ImageRecognizer" customModuleProvider="target">
                                 <rect key="frame" x="128" y="567" width="120" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="ajU-Yy-VVJ"/>
                                 </constraints>
                                 <state key="normal" title="解析する"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didPushRecognitionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pcq-Go-bl5"/>
                                 </connections>
