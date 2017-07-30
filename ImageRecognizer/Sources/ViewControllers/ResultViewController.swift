@@ -11,41 +11,48 @@ import ImageRecognition
 
 class ResultViewController: UIViewController {
 
-    var image: UIImage?
+    // MARK: - Properties
+    var selectedImage: UIImage?
     var category = ImageCategory.all
-    var ret: ImageRecognitionResultData = [:]
     var results: [RecognitionResult] = []
-    
+
+    // MARK: - IBOutlet
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var recognitionIdLabel: UILabel!
 
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        recognition()
 
         // xibをセルとして登録する
         tableView.register(R.nib.resultTableViewCell(), forCellReuseIdentifier: R.reuseIdentifier.resultCell.identifier)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        // 画像認識を実行
+        recognition()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    // MARK: - Private Methods
     private func recognition() {
         print(category.toString())
+
         let reco = ImageRecognition()
         let param = RequestParams()
         param.apiKey = "6d396a486a77776f36733734726e6c30354b4c4b6a63564b326f5536734b51594356414b4149374f676a2e"
-        param.recognitionType = category.toCategory() //RECOG_ALL
-        param.image = UIImage(named:"test_image")
+        param.recognitionType = category.toCategory()
+        param.image = selectedImage // UIImage(named:"test_image")
+
+        var ret: ImageRecognitionResultData = [:]
         do {
-            try self.ret = reco.recognize(param)
+            try ret = reco.recognize(param)
         } catch let error {
             print(error)
             resultLabel.text = "認識エラー"
@@ -55,8 +62,10 @@ class ResultViewController: UIViewController {
             resultLabel.text = "結果を取得できませんでした。"
             return
         }
+
         results = []
         resultLabel.text = "結果：\(ret.candidateDataList.count)件"
+        recognitionIdLabel.text = "RecognitionID: " + String(ret.recognitionId)
         for value in ret.candidateDataList {
             let data = value as! ImageRecognitionCandidateData
             let result = RecognitionResult()
@@ -66,34 +75,28 @@ class ResultViewController: UIViewController {
             result.imageUrl = data.imageUrl
             result.detail = data.detailData
 
-            //for item in data.detailData {
-            //    print(item.key, ":", item.value)
-            //}
-            //print(data.detailData)
-            //print(data.siteDataList)
+            // Debug output -----------------
+            print("ItemID: ", data.itemId)
+            for item in data.detailData {
+                print(item.key, ": ", item.value)
+            }
+            print("-----")
+            // ------------------------------
+
             for item in data.siteDataList {
                 let site = item as! ImageRecognitionSiteData
                 result.siteTitle = site.imageUrl
                 result.siteImageUrl = site.imageUrl
                 result.siteUrl = site.url
-                break // 一周で良い
+                break // 先頭のデータだけ格納したいので一周目で抜ける
             }
             results.append(result)
         }
+
         // データが取得できたらリロード
         tableView.reloadData()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ResultViewController: UITableViewDataSource {

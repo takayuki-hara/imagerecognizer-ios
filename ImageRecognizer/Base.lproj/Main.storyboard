@@ -20,27 +20,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="認識対象画像の設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-Nx-G5o">
-                                <rect key="frame" x="20" y="84" width="156" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="■認識対象画像の設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-Nx-G5o">
+                                <rect key="frame" x="20" y="84" width="170.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.15868747234344482" green="0.21822044253349304" blue="0.30320093035697937" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image" translatesAutoresizingMaskIntoConstraints="NO" id="Xsn-Wn-Zy9">
-                                <rect key="frame" x="87" y="109.5" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="109.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="RD0-G1-eLE"/>
                                     <constraint firstAttribute="width" constant="200" id="yqM-6p-p7z"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリの設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHq-30-HTX">
-                                <rect key="frame" x="20" y="369.5" width="121.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="■カテゴリの設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHq-30-HTX">
+                                <rect key="frame" x="20" y="369.5" width="136" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.15868747234344482" green="0.21822044253349304" blue="0.30320093035697937" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5xI-EP-QcV">
-                                <rect key="frame" x="30" y="319.5" width="316" height="30"/>
+                                <rect key="frame" x="29.5" y="319.5" width="316" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-LK-Pwe" customClass="CustomButton" customModule="ImageRecognizer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="30"/>
@@ -73,13 +73,14 @@
                                 </constraints>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FA-Fw-cAF">
-                                <rect key="frame" x="28" y="395" width="320" height="100"/>
+                                <rect key="frame" x="175" y="369.5" width="200" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="N2q-GK-9fe"/>
+                                    <constraint firstAttribute="width" constant="200" id="2NA-wq-Ryg"/>
+                                    <constraint firstAttribute="height" constant="150" id="N2q-GK-9fe"/>
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8C-4T-Itt" customClass="CustomButton" customModule="ImageRecognizer" customModuleProvider="target">
-                                <rect key="frame" x="128" y="567" width="120" height="30"/>
+                                <rect key="frame" x="127.5" y="607" width="120" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="ajU-Yy-VVJ"/>
                                 </constraints>
@@ -93,16 +94,27 @@
                                     <action selector="didPushRecognitionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pcq-Go-bl5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※DVD、ゲームソフト、CD、PCソフトは非対応っぽい" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vq9-pR-5K3">
+                                <rect key="frame" x="20" y="395" width="170" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="0aH-Tw-Chb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vq9-pR-5K3" firstAttribute="top" secondItem="mHq-30-HTX" secondAttribute="bottom" constant="5" id="28b-bU-XRg"/>
+                            <constraint firstAttribute="trailing" secondItem="5FA-Fw-cAF" secondAttribute="trailing" id="2Zh-77-ulx"/>
                             <constraint firstItem="Xsn-Wn-Zy9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F0p-Q1-yYc"/>
                             <constraint firstItem="LdD-Nx-G5o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="RDQ-2Y-ipw"/>
-                            <constraint firstItem="5FA-Fw-cAF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zvy-Re-WVH"/>
-                            <constraint firstItem="5FA-Fw-cAF" firstAttribute="top" secondItem="mHq-30-HTX" secondAttribute="bottom" constant="5" id="bpo-Vy-Acb"/>
+                            <constraint firstItem="5FA-Fw-cAF" firstAttribute="top" secondItem="5xI-EP-QcV" secondAttribute="bottom" constant="20" id="WV1-WH-MbJ"/>
+                            <constraint firstItem="vq9-pR-5K3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bYx-LQ-voL"/>
                             <constraint firstItem="R8C-4T-Itt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gvv-4V-3Nr"/>
                             <constraint firstItem="5xI-EP-QcV" firstAttribute="top" secondItem="Xsn-Wn-Zy9" secondAttribute="bottom" constant="10" id="h0i-Mj-zb6"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R8C-4T-Itt" secondAttribute="bottom" constant="70" id="mBr-5q-pdj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R8C-4T-Itt" secondAttribute="bottom" constant="30" id="mBr-5q-pdj"/>
                             <constraint firstItem="LdD-Nx-G5o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="mMN-Bd-9bs"/>
                             <constraint firstItem="mHq-30-HTX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="pcb-Wy-M3c"/>
                             <constraint firstItem="mHq-30-HTX" firstAttribute="top" secondItem="5xI-EP-QcV" secondAttribute="bottom" constant="20" id="uP7-dL-jiM"/>
@@ -120,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="37"/>
+            <point key="canvasLocation" x="1012" y="36.431784107946029"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="hMS-rF-lV5">
@@ -135,29 +147,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解析中..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ2-BX-rJi">
-                                <rect key="frame" x="20" y="84" width="66" height="21"/>
+                                <rect key="frame" x="20" y="84" width="66" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Id:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyF-AF-55t">
+                                <rect key="frame" x="20" y="109.5" width="53" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f5L-8C-gqQ">
-                                <rect key="frame" x="0.0" y="125" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="129" width="375" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="myk-zi-EJ4"/>
-                                </constraints>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KD4-3p-4JD">
+                                <rect key="frame" x="26.5" y="587" width="322" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9M-a4-YoF" customClass="CustomButton" customModule="ImageRecognizer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="30"/>
+                                        <state key="normal" title="検索結果候補全体に対するフィードバックする"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="f5L-8C-gqQ" firstAttribute="top" secondItem="TJ2-BX-rJi" secondAttribute="bottom" constant="20" id="1Jt-7e-pra"/>
+                            <constraint firstItem="f5L-8C-gqQ" firstAttribute="top" secondItem="qyF-AF-55t" secondAttribute="bottom" constant="5" id="5nU-gr-5gX"/>
                             <constraint firstItem="TJ2-BX-rJi" firstAttribute="leading" secondItem="kzZ-ot-slV" secondAttribute="leading" constant="20" id="80b-Lu-YnR"/>
+                            <constraint firstItem="qyF-AF-55t" firstAttribute="leading" secondItem="kzZ-ot-slV" secondAttribute="leading" constant="20" id="8UT-Ob-4IQ"/>
                             <constraint firstItem="f5L-8C-gqQ" firstAttribute="centerX" secondItem="kzZ-ot-slV" secondAttribute="centerX" id="EMk-Jv-OuS"/>
                             <constraint firstItem="f5L-8C-gqQ" firstAttribute="width" secondItem="kzZ-ot-slV" secondAttribute="width" id="Ida-lI-nZY"/>
+                            <constraint firstItem="V1A-fl-cg1" firstAttribute="top" secondItem="f5L-8C-gqQ" secondAttribute="bottom" constant="100" id="Kes-6d-lHP"/>
+                            <constraint firstItem="KD4-3p-4JD" firstAttribute="top" secondItem="f5L-8C-gqQ" secondAttribute="bottom" constant="20" id="W1J-4i-ZKs"/>
+                            <constraint firstItem="qyF-AF-55t" firstAttribute="top" secondItem="TJ2-BX-rJi" secondAttribute="bottom" constant="5" id="jVg-Pf-ZdC"/>
+                            <constraint firstItem="KD4-3p-4JD" firstAttribute="centerX" secondItem="kzZ-ot-slV" secondAttribute="centerX" id="nnB-Fn-qDk"/>
                             <constraint firstItem="TJ2-BX-rJi" firstAttribute="top" secondItem="lTM-JJ-8be" secondAttribute="bottom" constant="20" id="y18-ci-xhs"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="recognitionIdLabel" destination="qyF-AF-55t" id="wmk-9B-IUo"/>
                         <outlet property="resultLabel" destination="TJ2-BX-rJi" id="7mF-Rk-IcX"/>
                         <outlet property="tableView" destination="f5L-8C-gqQ" id="Pbk-Ln-dFy"/>
                     </connections>

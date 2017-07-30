@@ -14,9 +14,13 @@ class RecognitionResult {
     var itemId = ""
     var category = ""
     var imageUrl = ""
+
+    // 詳細データはカテゴリによって内容が異なる
     var detail: [AnyHashable: Any] = [:]
-    // サイトデータは複数あるが一つだけ抽出する
+
+    // サイトデータは元は配列だが先頭の一つだけ抽出する
     var siteTitle = ""
     var siteImageUrl = ""
     var siteUrl = ""
+
 }

@@ -10,29 +10,29 @@ import Foundation
 import ImageRecognition
 
 enum ImageCategory: Int {
-    case all, book, cd, dvd, game, software, food
+    case all, food, book, cd, dvd, game, software
     
     func toString() -> String {
         switch self {
         case .all:      return "すべて"
+        case .food:     return "食品"
         case .book:     return "書籍"
         case .cd:       return "CD"
         case .dvd:      return "DVD"
         case .game:     return "ゲームソフト"
         case .software: return "PCソフト"
-        case .food:     return "食品"
         }
     }
     
     func toCategory() -> String {
         switch self {
         case .all:      return RECOG_ALL
+        case .food:     return RECOG_FOOD
         case .book:     return RECOG_BOOK
         case .cd:       return RECOG_CD
         case .dvd:      return RECOG_DVD
         case .game:     return RECOG_GAME
         case .software: return RECOG_SOFTWARE
-        case .food:     return RECOG_FOOD
         }
     }
     

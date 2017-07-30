@@ -11,14 +11,19 @@ import Kingfisher
 
 class ResultTableViewCell: UITableViewCell {
 
+    // MARK: - Properties
+    var resultData: RecognitionResult? = nil
+    
+    // MARK: - IBOutlet
     @IBOutlet weak var objectImage: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var itemIdLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
 
+    // MARK: - IBAction
     @IBAction func didPushStoreButton(_ sender: Any) {
-        if let url = URL(string: (result?.siteUrl)!), UIApplication.shared.canOpenURL(url){
+        if let url = URL(string: (resultData?.siteUrl)!), UIApplication.shared.canOpenURL(url){
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:])
             } else {
@@ -27,8 +32,7 @@ class ResultTableViewCell: UITableViewCell {
         }
     }
 
-    var result: RecognitionResult? = nil
-
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,10 +40,10 @@ class ResultTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
+    // MARK: - Public Methods
     func setResult(_ result: RecognitionResult) {
         let url = URL(string: result.imageUrl)
         objectImage.kf.setImage(with: url)
@@ -50,6 +54,6 @@ class ResultTableViewCell: UITableViewCell {
         itemIdLabel.text = "ItemID: " + result.itemId
         categoryLabel.text = "Category: " + result.category
 
-        self.result = result
+        self.resultData = result
     }
 }
