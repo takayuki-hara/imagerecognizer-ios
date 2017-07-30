@@ -16,6 +16,7 @@
 		FD3FF2DC1F2CC0770055FFEF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FD3FF2DB1F2CC0770055FFEF /* Settings.bundle */; };
 		FD3FF2E61F2CE1490055FFEF /* ImageRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3FF2E51F2CE1490055FFEF /* ImageRecognition.framework */; };
 		FD3FF2E71F2CE1500055FFEF /* ImageRecognition.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD3FF2E51F2CE1490055FFEF /* ImageRecognition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3FF2EF1F2D964D0055FFEF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2EE1F2D964D0055FFEF /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		FD3FF2D71F2CBCD80055FFEF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3FF2DB1F2CC0770055FFEF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FD3FF2E51F2CE1490055FFEF /* ImageRecognition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageRecognition.framework; path = "Libraries/ImageRecognition/Release-universal/ImageRecognition.framework"; sourceTree = "<group>"; };
+		FD3FF2EE1F2D964D0055FFEF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		FD3FF2D61F2CBCD80055FFEF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD3FF2EE1F2D964D0055FFEF /* R.generated.swift */,
 				FD3FF2D71F2CBCD80055FFEF /* Info.plist */,
 				FD3FF2DB1F2CC0770055FFEF /* Settings.bundle */,
 			);
@@ -145,6 +148,7 @@
 			buildConfigurationList = FD3FF2CF1F2CBBC40055FFEF /* Build configuration list for PBXNativeTarget "ImageRecognizer" */;
 			buildPhases = (
 				61E010D917D728D16FB81FA8 /* [CP] Check Pods Manifest.lock */,
+				FD3FF2ED1F2D96040055FFEF /* ShellScript */,
 				FD3FF2B91F2CBBC40055FFEF /* Sources */,
 				FD3FF2BA1F2CBBC40055FFEF /* Frameworks */,
 				FD3FF2BB1F2CBBC40055FFEF /* Resources */,
@@ -256,6 +260,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		FD3FF2ED1F2D96040055FFEF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/ImageRecognizer/Supporting Files\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,6 +282,7 @@
 			files = (
 				FD3FF2D91F2CBCD80055FFEF /* TopViewController.swift in Sources */,
 				FD3FF2D81F2CBCD80055FFEF /* AppDelegate.swift in Sources */,
+				FD3FF2EF1F2D964D0055FFEF /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
