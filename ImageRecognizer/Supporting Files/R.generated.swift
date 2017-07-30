@@ -67,13 +67,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
   struct nib {
+    /// Nib `ResultTableViewCell`.
+    static let resultTableViewCell = _R.nib._ResultTableViewCell()
+    
+    /// `UINib(name: "ResultTableViewCell", in: bundle)`
+    static func resultTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.resultTableViewCell)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `resultCell`.
+    static let resultCell: Rswift.ReuseIdentifier<ResultTableViewCell> = Rswift.ReuseIdentifier(identifier: "resultCell")
+    
     fileprivate init() {}
   }
   
@@ -141,6 +152,20 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _ResultTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = ResultTableViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "resultCell"
+      let name = "ResultTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ResultTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ResultTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   

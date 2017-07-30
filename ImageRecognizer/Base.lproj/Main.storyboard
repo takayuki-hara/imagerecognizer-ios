@@ -75,7 +75,6 @@
                                 <state key="normal" title="解析する"/>
                                 <connections>
                                     <action selector="didPushRecognitionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pcq-Go-bl5"/>
-                                    <segue destination="wxu-Bg-uyX" kind="show" identifier="toResultSegue" id="XKE-TU-3Gg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -100,11 +99,12 @@
                         <outlet property="categoryPicker" destination="5FA-Fw-cAF" id="iZE-QC-H2S"/>
                         <outlet property="recognitionButton" destination="R8C-4T-Itt" id="bgf-4k-A4b"/>
                         <outlet property="targetImage" destination="Xsn-Wn-Zy9" id="TrA-1g-tz3"/>
+                        <segue destination="wxu-Bg-uyX" kind="show" identifier="toResultSegue" id="cCF-Og-bvv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+            <point key="canvasLocation" x="1012" y="37"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="hMS-rF-lV5">
@@ -141,6 +141,10 @@
                             <constraint firstItem="TJ2-BX-rJi" firstAttribute="top" secondItem="lTM-JJ-8be" secondAttribute="bottom" constant="20" id="y18-ci-xhs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="TJ2-BX-rJi" id="7mF-Rk-IcX"/>
+                        <outlet property="tableView" destination="f5L-8C-gqQ" id="Pbk-Ln-dFy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETn-y3-qn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

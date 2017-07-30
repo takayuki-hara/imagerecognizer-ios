@@ -19,6 +19,9 @@
 		FD3FF2EA1F2D8C330055FFEF /* ImageCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2E91F2D8C330055FFEF /* ImageCategory.swift */; };
 		FD3FF2EC1F2D93FB0055FFEF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2EB1F2D93FB0055FFEF /* ResultViewController.swift */; };
 		FD3FF2EF1F2D964D0055FFEF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2EE1F2D964D0055FFEF /* R.generated.swift */; };
+		FD3FF2F31F2DA6930055FFEF /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2F11F2DA6930055FFEF /* ResultTableViewCell.swift */; };
+		FD3FF2F41F2DA6930055FFEF /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3FF2F21F2DA6930055FFEF /* ResultTableViewCell.xib */; };
+		FD3FF2F71F2DDF420055FFEF /* RecognitionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2F61F2DDF420055FFEF /* RecognitionResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +55,9 @@
 		FD3FF2E91F2D8C330055FFEF /* ImageCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCategory.swift; sourceTree = "<group>"; };
 		FD3FF2EB1F2D93FB0055FFEF /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		FD3FF2EE1F2D964D0055FFEF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		FD3FF2F11F2DA6930055FFEF /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		FD3FF2F21F2DA6930055FFEF /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		FD3FF2F61F2DDF420055FFEF /* RecognitionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +126,10 @@
 		FD3FF2D21F2CBCD80055FFEF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FD3FF2F51F2DDF1C0055FFEF /* Entities */,
 				FD3FF2E81F2D8C140055FFEF /* Defines */,
 				FD3FF2D41F2CBCD80055FFEF /* ViewControllers */,
+				FD3FF2F01F2DA66B0055FFEF /* Views */,
 				FD3FF2D31F2CBCD80055FFEF /* AppDelegate.swift */,
 			);
 			path = Sources;
@@ -152,6 +160,23 @@
 				FD3FF2E91F2D8C330055FFEF /* ImageCategory.swift */,
 			);
 			path = Defines;
+			sourceTree = "<group>";
+		};
+		FD3FF2F01F2DA66B0055FFEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FF2F11F2DA6930055FFEF /* ResultTableViewCell.swift */,
+				FD3FF2F21F2DA6930055FFEF /* ResultTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FD3FF2F51F2DDF1C0055FFEF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FD3FF2F61F2DDF420055FFEF /* RecognitionResult.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3FF2F41F2DA6930055FFEF /* ResultTableViewCell.xib in Resources */,
 				FD3FF2CB1F2CBBC40055FFEF /* LaunchScreen.storyboard in Resources */,
 				FD3FF2DC1F2CC0770055FFEF /* Settings.bundle in Resources */,
 				FD3FF2C81F2CBBC40055FFEF /* Assets.xcassets in Resources */,
@@ -298,7 +324,9 @@
 				FD3FF2D81F2CBCD80055FFEF /* AppDelegate.swift in Sources */,
 				FD3FF2EF1F2D964D0055FFEF /* R.generated.swift in Sources */,
 				FD3FF2EA1F2D8C330055FFEF /* ImageCategory.swift in Sources */,
+				FD3FF2F31F2DA6930055FFEF /* ResultTableViewCell.swift in Sources */,
 				FD3FF2EC1F2D93FB0055FFEF /* ResultViewController.swift in Sources */,
+				FD3FF2F71F2DDF420055FFEF /* RecognitionResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
