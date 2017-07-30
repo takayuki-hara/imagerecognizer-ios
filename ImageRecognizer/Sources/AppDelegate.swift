@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // テーマカラーを設定する（UIパーツの配色が設定される）
+        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatMint(),
+                                                  withSecondaryColor: UIColor.flatWatermelon(),
+                                                  andContentStyle: UIContentStyle.contrast)
+
         return true
     }
 
