@@ -12,7 +12,7 @@
 		FD3FF2C81F2CBBC40055FFEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3FF2C71F2CBBC40055FFEF /* Assets.xcassets */; };
 		FD3FF2CB1F2CBBC40055FFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3FF2C91F2CBBC40055FFEF /* LaunchScreen.storyboard */; };
 		FD3FF2D81F2CBCD80055FFEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2D31F2CBCD80055FFEF /* AppDelegate.swift */; };
-		FD3FF2D91F2CBCD80055FFEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2D51F2CBCD80055FFEF /* ViewController.swift */; };
+		FD3FF2D91F2CBCD80055FFEF /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3FF2D51F2CBCD80055FFEF /* TopViewController.swift */; };
 		FD3FF2DC1F2CC0770055FFEF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FD3FF2DB1F2CC0770055FFEF /* Settings.bundle */; };
 		FD3FF2E61F2CE1490055FFEF /* ImageRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3FF2E51F2CE1490055FFEF /* ImageRecognition.framework */; };
 		FD3FF2E71F2CE1500055FFEF /* ImageRecognition.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD3FF2E51F2CE1490055FFEF /* ImageRecognition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -42,7 +42,7 @@
 		FD3FF2C71F2CBBC40055FFEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD3FF2CA1F2CBBC40055FFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD3FF2D31F2CBCD80055FFEF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD3FF2D51F2CBCD80055FFEF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD3FF2D51F2CBCD80055FFEF /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		FD3FF2D71F2CBCD80055FFEF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3FF2DB1F2CC0770055FFEF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FD3FF2E51F2CE1490055FFEF /* ImageRecognition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageRecognition.framework; path = "Libraries/ImageRecognition/Release-universal/ImageRecognition.framework"; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		FD3FF2D41F2CBCD80055FFEF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FD3FF2D51F2CBCD80055FFEF /* ViewController.swift */,
+				FD3FF2D51F2CBCD80055FFEF /* TopViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3FF2D91F2CBCD80055FFEF /* ViewController.swift in Sources */,
+				FD3FF2D91F2CBCD80055FFEF /* TopViewController.swift in Sources */,
 				FD3FF2D81F2CBCD80055FFEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

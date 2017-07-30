@@ -4,15 +4,14 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Top View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TopViewController" customModule="ImageRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,19 +21,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-LK-Pwe">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <rect key="frame" x="165" y="19" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="didPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T3z-Lu-14M"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xsn-Wn-Zy9">
+                                <rect key="frame" x="67" y="214" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="RD0-G1-eLE"/>
+                                    <constraint firstAttribute="width" constant="240" id="yqM-6p-p7z"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GGh-LK-Pwe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C3T-ZX-rBc"/>
+                            <constraint firstItem="GGh-LK-Pwe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-300" id="C3T-ZX-rBc"/>
+                            <constraint firstItem="Xsn-Wn-Zy9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F0p-Q1-yYc"/>
+                            <constraint firstItem="Xsn-Wn-Zy9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R7L-9p-ArQ"/>
                             <constraint firstItem="GGh-LK-Pwe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dZZ-fB-tAK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="targetImage" destination="Xsn-Wn-Zy9" id="TrA-1g-tz3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
